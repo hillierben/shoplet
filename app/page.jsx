@@ -1,7 +1,10 @@
+import ProductList from "./components/ProductList";
 
 
 export default function Home() {
   return (
-    <h1>Shoplet</h1>
+    <div>
+      <ProductList/>
+    </div>
   )
 }

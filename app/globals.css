@@ -2,4 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: #ffffff;
+}
+
+.categories {
+  border: solid black;
+  width: 100%;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none;
+}
+
+nav {
+  border-bottom: solid black;
+  @apply p-2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @apply 
+
+    mx-auto;
+  align-items: center;
+  
+}
+
+nav > span > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > span > ul > li {
+  @apply 
+    px-2
+}
+
 
