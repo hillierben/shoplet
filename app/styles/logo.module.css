@@ -24,6 +24,12 @@
   font-size:xx-large;
 }
 
+@media screen and (max-width: 600px) {
+  .text {
+    display: none;
+  }
+}
+
 .teardrop {
   width: 25px;
   height: 25px;

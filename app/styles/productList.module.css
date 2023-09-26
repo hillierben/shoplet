@@ -5,9 +5,9 @@
 
 .img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
-  margin-top: 38px;
+  height: 300px;
+  object-fit:cover;
+  margin-top: 0px;
 }
 
 .info {
@@ -16,15 +16,18 @@
 
 .item {
   position: relative;
-  box-shadow: 0 0 5px;
+  box-shadow: 1px 1px 3px rgb(171, 171, 171);
+  border-radius: 4px;
+  margin: 5px;
 }
 
 .list {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
-  margin: 5px;
+  margin: auto;
+  max-width: 1300px;
 }
 
 .price {

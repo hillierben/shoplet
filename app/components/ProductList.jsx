@@ -7,8 +7,21 @@ import styles from '../styles/productList.module.css'
 export default async function ProductList() {
   const supabase = createServerComponentClient({cookies})
   
-  const { data: products } = await supabase.from('products')
+  const { data } = await supabase.from('products')
     .select()
+
+  
+  // copy all products into a new list - later this function will FILTER out products based on SEARCH and CATEGORIES
+  const products = []
+  data.map((item) => {
+    products.push(item)
+  })
+
+
+  // convert all prices to 2 decimal places
+  function convertTwoDecimal(price) {
+    return price.toFixed(2)
+  }
 
   return (
     <ul className={styles.list}>
@@ -23,7 +36,9 @@ export default async function ProductList() {
             </div>
             <div className={styles.price}>
               <span>£
-                <span className={styles.priceText}>{product.price}</span>
+                <span className={styles.priceText}>
+                  {convertTwoDecimal(product.price)}
+                </span>
               </span>
             </div>
             <div className={styles.info}>
